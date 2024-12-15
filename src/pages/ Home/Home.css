@@ -1,0 +1,42 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f7f7;
+  position: relative;
+  direction: scroll;
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: flex-start;
+  animation: scroll-marquee 15s linear infinite;
+}
+
+.marquee-content img {
+  margin: 0 30px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.marquee-content img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.marquee-content img {
+  alt: "Logo";
+}

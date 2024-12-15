@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.body {
+  background: url("../../../public/images/iam.jpg") no-repeat center
+    center/cover;
+  /* height: 100vh; */
+  height: 78vh;
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0 0 10px #000;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+}
+
+header .logo {
+  flex: 1;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+header .logo img {
+  width: 150px;
+  transition: all 0.3s ease-in-out;
+}
+header .logo img:hover {
+  transform: scale(1.1);
+}
+
+header .search-box {
+  flex: 1;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.search-box button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header ul {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+header ul li {
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+  background: cadetblue;
+  color: #fff;
+}
+
+header ul li a .icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.button {
+  background-color: #6c8988;
+  border-radius: 30px;
+}
+
+header .menu {
+  font-size: 2.5em;
+  display: none;
+}
+#chk1 {
+  display: none;
+}
+.text-overlay {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.text-overlay h1 {
+  color: #38dd0e;
+}
+.text-overlay p {
+  color: #afa0a8;
+}
+
+@media (max-width: 1000px) {
+  header ul {
+    position: fixed;
+    top: 73px;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.8);
+    height: 83vh;
+    width: 35%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: right 0.5s ease;
+  }
+  .button {
+    background-color: #12e3dc;
+    border: 30px blue;
+    border-radius: 30px;
+  }
+  #chk1 {
+    display: none;
+  }
+  .none {
+    display: none;
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+  header ul li {
+    margin-bottom: 15px;
+  }
+
+  header ul li a {
+    font-size: 1.2rem;
+  }
+
+  header .menu {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  header ul {
+    width: 100%;
+  }
+
+  header .logo {
+    font-size: 18px;
+  }
+}
