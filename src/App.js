@@ -10,6 +10,7 @@ import Contact from "./pages/Contact/Contact";
 import Reviews from "./pages/Reviews/Reviews";
 import Ride from "./pages/Ride/Ride";
 import Services from "./pages/Services/Services";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/ride" element={<Ride/>}></Route>
         <Route path="/services" element={<Services/>}></Route>
       </Routes>
+      <Footer/>
      </Router>
         
       
